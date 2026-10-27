@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-10-27T00:47:35.742060+00:00",
+  "total_findings": 6,
+  "severity_counts": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 3,
+    "LOW": 0,
+    "INFO": 1
+  },
+  "status_counts": {
+    "PASS": 1,
+    "FAIL": 2,
+    "REVIEW": 3
+  },
+  "results": [
+    {
+      "finding_id": "TM-DEMO-API-01-02",
+      "title": "Publicly exposed asset is configured without authentication.",
+      "category": "Authentication",
+      "severity": "HIGH",
+      "status": "FAIL",
+      "description": "Publicly exposed asset is configured without authentication.",
+      "evidence": "Supplied configuration identifies public exposure and no authentication.",
+      "remediation": "Require appropriate authentication or document an approved, constrained public-access design."
+    },
+    {
+      "finding_id": "TM-DEMO-SVC-02-01",
+      "title": "Asset exposure is not established.",
+      "category": "Architecture visibility",
+      "severity": "MEDIUM",
+      "status": "REVIEW",
+      "description": "Asset exposure is not established.",
+      "evidence": "Input configuration sets exposure to unknown.",
+      "remediation": "Confirm network reachability and document trust boundaries."
+    },
+    {
+      "finding_id": "DEP-0001",
+      "title": "Dependency version is missing or not pinned.",
+      "category": "Dependency",
+      "severity": "MEDIUM",
+      "status": "REVIEW",
+      "description": "Dependency version is missing or not pinned.",
+      "evidence": "Supplied version value: latest.",
+      "remediation": "Resolve and pin an approved version; verify the lockfile and transitive dependency tree."
+    },
+    {
+      "finding_id": "API-0001",
+      "title": "Observed API access behavior differs from the expected policy.",
+      "category": "API Security",
+      "severity": "HIGH",
+      "status": "FAIL",
+      "description": "Observed API access behavior differs from the expected policy.",
+      "evidence": "Test case=missing_credentials; expected=DENY; observed=ALLOW.",
+      "remediation": "Verify the endpoint's authentication and authorization policy, correct enforcement, and add a regression test."
+    },
+    {
+      "finding_id": "API-0002",
+      "title": "Recorded API outcome matches the declared expectation.",
+      "category": "API Security",
+      "severity": "INFO",
+      "status": "PASS",
+      "description": "Recorded API outcome matches the declared expectation.",
+      "evidence": "Test case=insufficient_privileges; expected=DENY; observed=DENY.",
+      "remediation": "Retain the test as a regression check and validate coverage across protected endpoints."
+    },
+    {
+      "finding_id": "API-0003",
+      "title": "API security behavior could not be verified.",
+      "category": "API Security",
+      "severity": "MEDIUM",
+      "status": "REVIEW",
+      "description": "API security behavior could not be verified.",
+      "evidence": "Observed outcome: NOT_TESTED.",
+      "remediation": "Investigate the test error or execute the missing test and record the actual response."
+    }
+  ]
+}

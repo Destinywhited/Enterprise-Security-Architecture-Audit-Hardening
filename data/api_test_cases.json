@@ -1,0 +1,20 @@
+[
+  {
+    "endpoint": "/synthetic/private",
+    "test_case": "missing_credentials",
+    "expected": "DENY",
+    "observed": "ALLOW"
+  },
+  {
+    "endpoint": "/synthetic/admin",
+    "test_case": "insufficient_privileges",
+    "expected": "DENY",
+    "observed": "DENY"
+  },
+  {
+    "endpoint": "/synthetic/records",
+    "test_case": "expired_credentials",
+    "expected": "DENY",
+    "observed": "NOT_TESTED"
+  }
+]

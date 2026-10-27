@@ -1,0 +1,20 @@
+[
+  {
+    "asset_id": "DEMO-API-01",
+    "name": "Synthetic Public API",
+    "type": "api",
+    "exposure": "public",
+    "authentication": "none",
+    "authorization": "enabled",
+    "sensitive_data": false
+  },
+  {
+    "asset_id": "DEMO-SVC-02",
+    "name": "Synthetic Internal Service",
+    "type": "microservice",
+    "exposure": "unknown",
+    "authentication": "enabled",
+    "authorization": "enabled",
+    "sensitive_data": true
+  }
+]

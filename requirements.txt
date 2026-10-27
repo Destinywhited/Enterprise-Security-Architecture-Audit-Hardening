@@ -1,0 +1,2 @@
+# No third-party dependencies are currently required.
+# The initial audit framework uses the Python standard library.
